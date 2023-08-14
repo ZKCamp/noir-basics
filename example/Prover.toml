@@ -1,0 +1,9 @@
+[[items]]
+cost = 1
+price = 1
+quantity = 1
+
+[[items]]
+cost = 8
+price = 4
+quantity = 2

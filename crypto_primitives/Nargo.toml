@@ -1,0 +1,8 @@
+[package]
+name = "crypto_primitives"
+entry = "src/hash.nr"
+type = "bin"
+authors = [""]
+compiler_version = "0.9.0"
+
+[dependencies]
