@@ -53,6 +53,6 @@ fn main() {
 }
 
 #[test]
-fn tst_address_generation() {
+fn test_address_generation() {
     main();
 }
