@@ -2,17 +2,14 @@
 use dep::std;
 
 fn address_from_public_key(pub_key: [u8; 64]) -> Field {
-    std::println(pub_key);
-    let hash_of_public_key = std::hash::keccak256(pub_key, 32);
-    std::println(hash_of_public_key);
-    let mut result: Field = 0;
-    let mut v: Field = 1;
+    let hashed_pub_key = std::hash::keccak256(pub_key, 64);
 
+    let mut addr: Field = 0;
     for i in 0..20 {
-        result += hash_of_public_key[31 - i] as Field * v;
-        v *= 256;
+        addr = (addr * 256) + hashed_pub_key[i + 12] as Field;
     }
-    result
+
+    addr
 }
 
 struct key {
