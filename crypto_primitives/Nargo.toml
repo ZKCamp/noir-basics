@@ -1,8 +1,9 @@
 [package]
 name = "crypto_primitives"
-entry = "src/address_generation.nr"
+entry = "src/verify_signature.nr"
 type = "bin"
 authors = [""]
 compiler_version = "0.9.0"
 
 [dependencies]
+u2b = { tag = "v0.3.0-nightly", git = "https://github.com/codingnirvana/noir-u2b" }
