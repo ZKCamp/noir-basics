@@ -1,6 +1,6 @@
 [package]
 name = "noir_basics"
-entry = "hash.nr"
+entry = "vectors.nr"
 type = "bin"
 authors = [""]
 compiler_version = "0.9.0"
