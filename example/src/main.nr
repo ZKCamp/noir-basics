@@ -28,7 +28,12 @@ fn main(items: [Item; 2]) -> pub Field {
     assert(items.all(|i:Item| i.check_cost()));
 
     let mut total = items.fold(0, |x, i: Item| x + i.cost );
-    total + (total * 5)/100
+
+    if (total as u4 > 8) {
+        total + (total * 5)/100
+    } else {
+        total
+    }
 }
 
 #[test]
